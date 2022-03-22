@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/rose.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+        />
+        <title>Button Generator</title>
+    </head>
+
+    <body>
+        <main>
+            <section id="button-maker">
+                <div class="card">
+                    <h1 align="center" class="card_title"><b>Rose Button Generator</b></h1>
+                    <p align="center">
+                        <a
+                            class="github-button"
+                            href="https://github.com/szsupunma"
+                            data-color-scheme="no-preference: dark; light: dark; dark: dark;"
+                            data-size="large"
+                            data-show-count="true"
+                            aria-label="Follow @szsupunma on GitHub"
+                            >supun</a
+                        >
+                    </p>
+                    <p align="center">
+                        <a href="https://t.me/szteambots"> Updates Channel </a> •
+                        <a href="https://t.me/slbotzone"> Support Group </a>
+                    </p>
+                    <br />
+                </div>
+                <div id="button-form">
+                    <div id="button-form-wrapper">
+                        <div class="button-group">
+                            <div class="button-info">
+                                <div class="button-input">
+                                    <label for="button-label-1">Button Label/Name</label>
+                                    <input type="text" name="button-label-1" id="button-label-1" />
+                                </div>
+                                <div class="button-input">
+                                    <label for="button-data-1">Button Link/Url</label>
+                                    <input type="text" name="button-data-1" id="button-data-1" />
+                                </div>
+                            </div>
+                            <div class="button-options">
+                                <div class="button-sameline">
+                                    <input
+                                        type="checkbox"
+                                        class="sameline-switch"
+                                        name="sameline-toggle-1"
+                                        id="sameline-toggle-1"
+                                        disabled="true"
+                                    />
+                                    <label class="sameline-label" for="sameline-toggle-1"
+                                        >Same Line<span class="sameline-checkbox"></span
+                                    ></label>
+                                </div>
+                                <div class="button-type">
+                                    <input
+                                        type="checkbox"
+                                        name="type-toggle-1"
+                                        id="type-toggle-1"
+                                    />
+                                    <label for="type-toggle-1">
+                                        <div
+                                            class="button-type-switch"
+                                            data-checked="Note"
+                                            data-unchecked="Link"
+                                        ></div>
+                                    </label>
+                                </div>
+                                <div class="button-delete">
+                                    <button
+                                        onclick="removeButton(this)"
+                                        id="button-delete-1"
+                                        class="delete-rose-button"
+                                        style="color: rgb(0, 0, 0)"
+                                    >
+                                        <i class="far fa-trash-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="button-form-actions">
+                        <button type="button" onclick="addButton()" class="add-button">
+                            New Button
+                        </button>
+                        <button type="button" onclick="generateButtonCode()">Generate Code</button>
+                    </div>
+                </div>
+            </section>
+            <section id="button-form-output">
+                <div class="button-output-header">
+                    <h2>Generated Button Code</h2>
+                    <div class="button-copy" onclick="copyCode()">
+                        <i class="far fa-copy"></i>
+                    </div>
+                </div>
+                <div id="button-output"></div>
+            </section>
+
+            <script src="assets/js/vendor/script-min.js"></script>
+        </main>
+    </body>
+</html>
